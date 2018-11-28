@@ -12,26 +12,6 @@ namespace InstaSharper.Classes
             _isEnabled = true;
         }
 
-        public static IRequestDelay FromSeconds(int min, int max)
-        {
-            if (min > max)
-            {
-                throw new ArgumentException("Value max should be bigger that value min");
-            }
-
-            if (max < 0)
-            {
-                throw new ArgumentException("Both min and max values should be bigger than 0");
-            }
-
-            return new RequestDelay(min, max);
-        }
-
-        public static IRequestDelay Empty()
-        {
-            return new RequestDelay(0, 0);
-        }
-
         private readonly Random _random;
         private readonly int _minSeconds;
         private readonly int _maxSeconds;
@@ -49,6 +29,20 @@ namespace InstaSharper.Classes
         public void Disable()
         {
             _isEnabled = false;
+        }
+
+        public static IRequestDelay FromSeconds(int min, int max)
+        {
+            if (min > max) throw new ArgumentException("Value max should be bigger that value min");
+
+            if (max < 0) throw new ArgumentException("Both min and max values should be bigger than 0");
+
+            return new RequestDelay(min, max);
+        }
+
+        public static IRequestDelay Empty()
+        {
+            return new RequestDelay(0, 0);
         }
     }
 }

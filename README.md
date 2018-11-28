@@ -11,28 +11,16 @@ Note that: there is a simple [Instagram API](https://github.com/a-legotin/Instag
 [![Build status](https://travis-ci.org/a-legotin/InstaSharper.svg?branch=master)](https://travis-ci.org/a-legotin/InstaSharper)
 [![NuGet](https://img.shields.io/nuget/v/InstaSharper.svg)](https://www.nuget.org/packages/InstaSharper/)
 [![MyGet](https://img.shields.io/myget/a-legotin/v/instasharper-develop.svg)](https://www.myget.org/feed/Details/instasharper-develop)
-[![Telegram chat](https://img.shields.io/badge/telegram-channel-blue.svg)](https://t.me/instasharper)
 [![GitHub stars](https://img.shields.io/github/stars/a-legotin/InstaSharper.svg)](https://github.com/a-legotin/InstaSharper/stargazers)
 
 #### Current version: 1.4.0 [Stable], 1.5.0 [Under development]
 
 ## Overview
-This project intends to provide all the features available in the Instagram API up to 12.0.0.7.91. It is being developed in C# for .NET Framework 4.5.2 and .NET Standart 2.0
+This project intends to provide all the features available in the Instagram API up to 12.0.0.7.91. It is being developed in C# for .NET Framework 4.5.2 and .NET Standard 2.0
 
 #### This repository is provided for reference purposes only.
 
 * Please note that this project is still in design and development phase; the libraries may suffer major changes even at the interface level, so don't rely (yet) in this software for production uses. *
-
-## Donations are welcome
-Support developer with any tip! 
-
-![btc](http://codegarage.ru/assets/images/if__bitcoin_1156710.png) 144BkLkexhUnMsmiVMS6ZvSNeYjBnKMmRG
-
-![yandex money](http://codegarage.ru/assets/images/yandex_dengi_product_icon_rgb.png) [Yandex.Money](https://money.yandex.ru/to/41001486165128)
-
-![donationalerts](http://codegarage.ru/assets/images/favicon-32x32.png) [Donation Alerts](http://www.donationalerts.ru/r/instasharper)
-
-*Any funds received are not for goods or services, but are monetary tips to help support author. I am thankful for your attention and while I do appreciate if you do decide to tip, it is not required. Before tipping, please consider that your tips are non-refundable.
 
 ## Cross-platform by design
 Build with dotnet core. Can be used on Mac, Linux, Windows.
@@ -49,6 +37,7 @@ Currently the library supports following coverage of the following Instagram API
 
 - [x] Login
 - [x] Logout
+- [x] Create new account
 - [x] Get user explore feed
 - [x] Get user timeline feed
 - [x] Get all user media by username
@@ -76,6 +65,7 @@ Currently the library supports following coverage of the following Instagram API
 - [x] Send comment
 - [x] Delete comment
 - [x] Upload photo
+- [x] Upload video
 - [x] Get followings list
 - [x] Delete media (photo/video)
 - [x] Upload story (photo)
@@ -143,6 +133,8 @@ IResult<bool> postResult = await apiInstance.CommentMediaAsync("1234567891234567
 [vitalragaz](https://github.com/vitalragaz) for contribution
 
 [n0ise9914](https://github.com/n0ise9914) for contribution
+
+[Ramtinak](https://github.com/ramtinak) for contribution
 
 [mgp25](https://github.com/mgp25) and his [php wrapper](https://github.com/mgp25/Instagram-API/)
 
