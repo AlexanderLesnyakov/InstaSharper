@@ -43,6 +43,13 @@ namespace InstaSharper.API.Builder
         IInstaApiBuilder SetUser(UserSessionData user);
 
         /// <summary>
+        ///     Set custom device.
+        /// </summary>
+        /// <param name="device">Custom device</param>
+        /// <returns></returns>
+        IInstaApiBuilder SetDevice(AndroidDevice device);
+
+        /// <summary>
         ///     Set custom request message. Used to be able to customize device info.
         /// </summary>
         /// <param name="requestMessage">Custom request message object</param>
