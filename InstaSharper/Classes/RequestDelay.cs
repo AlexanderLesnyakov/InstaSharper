@@ -4,6 +4,12 @@ namespace InstaSharper.Classes
 {
     public class RequestDelay : IRequestDelay
     {
+        private readonly int _maxSeconds;
+        private readonly int _minSeconds;
+
+        private readonly Random _random;
+        private bool _isEnabled;
+
         private RequestDelay(int minSeconds, int maxSeconds)
         {
             _minSeconds = minSeconds;
@@ -11,11 +17,6 @@ namespace InstaSharper.Classes
             _random = new Random(DateTime.Now.Millisecond);
             _isEnabled = true;
         }
-
-        private readonly Random _random;
-        private readonly int _minSeconds;
-        private readonly int _maxSeconds;
-        private bool _isEnabled;
 
         public TimeSpan Value => Exist ? TimeSpan.FromSeconds(_random.Next(_minSeconds, _maxSeconds)) : TimeSpan.Zero;
 
